@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Professional Online Examination System</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Landing Page Section -->
+    <div id="landing-page" class="page active">
+        <div class="container">
+            <header>
+                <h1>Online Examination System</h1>
+                <p>Simulate a real-world exam platform for universities and certification bodies.</p>
+            </header>
+            <div class="rules-card">
+                <h2>Exam Rules & Instructions</h2>
+                <ul>
+                    <li>The exam consists of multiple-choice and descriptive questions.</li>
+                    <li>You have 10 minutes to complete the exam.</li>
+                    <li>Questions will be randomized for fairness.</li>
+                    <li>Do not refresh the page, right-click, or copy/paste during the exam.</li>
+                    <li>Ensure all questions are attempted before submitting.</li>
+                    <li>Auto-submit will occur on timeout.</li>
+                </ul>
+                <button id="start-exam-btn" class="btn-primary">Start Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <!-- Exam Page Section -->
+    <div id="exam-page" class="page">
+        <div class="container">
+            <header>
+                <h1>Exam in Progress</h1>
+                <div class="timer">
+                    <span id="timer-display">10:00</span>
+                </div>
+            </header>
+            <div class="progress-bar">
+                <div id="progress" class="progress-fill"></div>
+            </div>
+            <div id="questions-container">
+                <!-- Questions will be dynamically inserted here -->
+            </div>
+            <button id="submit-exam-btn" class="btn-primary">Submit Exam</button>
+        </div>
+    </div>
+
+    <!-- Results Page Section -->
+    <div id="results-page" class="page">
+        <div class="container">
+            <header>
+                <h1>Exam Results</h1>
+            </header>
+            <div class="results-card">
+                <h2>Scorecard</h2>
+                <div class="score-summary">
+                    <p><strong>Total Score:</strong> <span id="total-score"></span></p>
+                    <p><strong>Correct Answers:</strong> <span id="correct-count"></span></p>
+                    <p><strong>Incorrect Answers:</strong> <span id="incorrect-count"></span></p>
+                    <p><strong>Attempted Questions:</strong> <span id="attempted-count"></span></p>
+                    <p><strong>Unattempted Questions:</strong> <span id="unattempted-count"></span></p>
+                </div>
+                <div id="detailed-results">
+                    <!-- Detailed results will be inserted here -->
+                </div>
+                <button id="retake-exam-btn" class="btn-secondary">Retake Exam</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
